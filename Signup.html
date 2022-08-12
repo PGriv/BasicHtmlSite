@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>signup</title>
+    <style>
+      #xr{color: black}
+      .bo{background-color: Turquoise}
+      legend {color:blue}
+      label {color:}
+
+
+    </style>
+  </head>
+  <body class="bo">
+    <h2 id="xr">Κάνε δωρεάν account στο 'Χρυσό Βάτραχο' </h2>
+    <fieldset>
+      <legend>Εγγραφή</legend>
+
+    <form action="/sendData" method="post" enctype="multipart/form-data">
+      <label for="txtUsername">Username</label>
+      <input type="text" name="Username" id="txtUsername" minlenght="3" maxlength="20" required placeholder="Enter your Username" pattern="[0-9a-zA-Z]{4,10}">(*)
+      <br>
+      <br>
+      <label for="txtPassword">Password</label>
+      <input type="password" name="Password" id="Password" minlenght="3" maxlength="20" required placeholder="Enter your Password">(*)
+      <br>
+
+      <br>
+      <label for="txtTel">Phone number</label>
+      <input type="tel" name="phone" id = "txtTel" placeholder="Enter your phone number">
+
+      <br><br>
+      <label for="txtEmail">Email</label>
+      <input type="email" name="email" id="txtEmail" required placeholder="Enter your email">(*)
+
+      <br>
+      <br>
+      <label for="txtAge">Age</label>
+      <input type="date" name="Age" id="txtAge" required placeholder="Your Age" >(*)
+      <br><br>
+
+
+      <label for="txtNum1">Ποσό εισαγωγής (1 έως 10)</label>
+      <input type="number" name="number1" min="20" max="100" id="txtNum1">
+      <br><br>
+      <label for="fc">Φωτογραφία ταυτότητας</label>
+      <input type="file" name="file" id="fc">
+      <br><br>
+          Τα πεδία (*) είναι υποχρεωτικά
+        </fieldset>
+      <input type="hidden" name="hidden" value="someValue">
+      <br>
+      <br>
+      <fieldset>
+        <legend>Πόσο πλούσιος θέλεις να γίνεις;</legend>
+
+      <input type="radio" name="wealth" value="poor-on"  id="poor">
+      <label for="poor">Λίγο</label> (Μην μπεις καν στον κόπο)
+      <br>
+      <input type="radio" name="wealth" value="medium-on" id="medium">
+      <label for="medium">Έτσι κι έτσι</label>
+      <br>
+      <input type="radio" name="wealth" value="rich-on" id="rich">
+      <label for="rich">Πλούσιος</label>
+      <br>
+      <input type="radio" name="wealth" value="mahara-on" id="mahara">
+      <label for="mahara">Εφόπλας</label>
+      </fieldset>
+      <br><br>
+      <label for="slPayment">Τρόπος Χρέωσης</label>
+      <select id="slPayment" name="payment">
+        <option value="visa" selected>VISA</option>
+        <option value="Paypal" >Paypal</option>
+        <option value="Paysafe">Paysafe</option>
+      </select>
+      <br><br>
+      <fieldset>
+        <legend>Επίλεξε χώρα</legend>
+
+          <select id="slDest" name ="destination" multiple size="4">
+            <optgroup label="Country">
+              <option value="Greece" selected>Greece</option>
+              <option value="Spain">Spain</option>
+              <option value="Italy">Italy</option>
+              <option value="other">Other</option>
+            </optgroup>
+          </select>
+      </fieldset>
+      <br><br>
+       <input type="submit"  value="Sign up">
+        <input type="reset"  value="Clear">
+    </form>
+
+  </body>
+</html>
